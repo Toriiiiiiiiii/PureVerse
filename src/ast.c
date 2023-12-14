@@ -11,19 +11,19 @@ void printNodeIndented(pv_astnode_t node, int indent) {
   printf("{\n");
 
   printIndent(indent + 1);
-  printf("'line': %d,\n", node.line);
+  printf("\"line\": %d,\n", node.line);
 
   printIndent(indent + 1);
-  printf("'col': %d,\n", node.col);
+  printf("\"col\": %d,\n", node.col);
 
   printIndent(indent + 1);
-  printf("'type': %d,\n", node.type);
+  printf("\"type\": %d,\n", node.type);
 
   printIndent(indent + 1);
-  printf("'value': '%s',\n", node.value);
+  printf("\"value\": \"%s\",\n", node.value);
 
   printIndent(indent + 1);
-  printf("'children': [\n");
+  printf("\"children\": [\n");
 
   for(int index = 0; index < node.children.size; ++index) {
     printNodeIndented(getNodeListIndex(&node.children, index), indent + 2);

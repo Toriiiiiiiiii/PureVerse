@@ -7,6 +7,7 @@
 #include <stdio.h>
 
 enum _pv_astnode_type_t {
+  AST_PROGRAM,
   AST_NUMBERLIT,
   AST_FNDEF,
   AST_IDENTIFIER,

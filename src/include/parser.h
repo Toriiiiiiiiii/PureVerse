@@ -15,7 +15,7 @@ struct _pv_parser_t {
 typedef struct _pv_parser_t pv_parser_t;
 
 pv_parser_t createParser(pv_tokenlist_t tokens);
-pv_astnodelist_t parseTokens(pv_parser_t *parser);
+pv_astnode_t parseTokens(pv_parser_t *parser);
 
 pv_token_t pvparse_getCurrentToken(pv_parser_t *parser);
 pv_token_t pvparse_getCurrentTokenAndAdvance(pv_parser_t *parser);

@@ -39,16 +39,10 @@ int main(int argc, char **argv) {
   pv_lexer_t lexer = createLexer(fileContents); 
   pv_tokenlist_t tokenList = tokenizeString(&lexer);
 
-  for(int i = 0; i < tokenList.size; ++i) {
-    printTokenInformation(getTokenListIndex(&tokenList, i));
-  }
-
   pv_parser_t parser = createParser(tokenList);
-  pv_astnodelist_t astNodes = parseTokens(&parser);
+  pv_astnode_t program = parseTokens(&parser);
 
-  for(int i = 0; i < astNodes.size; ++i) {
-    printASTNode(getNodeListIndex(&astNodes, i));
-  }
+  printASTNode(program);
 
   destroyTokenList(&tokenList);
   return 0;

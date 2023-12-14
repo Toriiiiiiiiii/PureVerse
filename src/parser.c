@@ -26,7 +26,6 @@ bool pvparse_parseComplete(pv_parser_t *parser) {
 }
 
 pv_astnode_t parseNode(pv_parser_t *parser) {
-  printTokenInformation(pvparse_getCurrentToken(parser)); 
   pv_astnode_t result = {0};
   result.children = createNodeList();
 
@@ -98,11 +97,17 @@ pv_astnode_t parseNode(pv_parser_t *parser) {
   return result;
 }
 
-pv_astnodelist_t parseTokens(pv_parser_t *parser) {
-  pv_astnodelist_t result = createNodeList();
+pv_astnode_t parseTokens(pv_parser_t *parser) {
+  pv_astnode_t result = {
+    .line = 1,
+    .col = 1,
+    .type = AST_PROGRAM,
+    .value = "",
+    .children = createNodeList()
+  };
 
   while(!pvparse_parseComplete(parser)) {
-    appendNodeList(&result, parseNode(parser));
+    appendNodeList(&result.children, parseNode(parser));
   }
 
   return result;
