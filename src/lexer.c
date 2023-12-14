@@ -9,7 +9,6 @@ static const char *pvlex_numberBody   = "0123456789.";
 static const char *pvlex_binaryOps    = "+-*/%<>=!";
 static const char *pvlex_whitespace   = " \t\n";
 
-
 pv_lexer_t createLexer(char *source) {
   pv_lexer_t result = {0};
 
@@ -143,6 +142,51 @@ pv_tokenlist_t tokenizeString(pv_lexer_t *lexer) {
       appendToTokenList(&result, pvlex_buildNumber(lexer));
     } else if(pvlex_charInString(pvlex_binaryOps, current)) {
       appendToTokenList(&result, pvlex_buildBinaryOp(lexer));
+    }
+
+    else if(current == '(') {
+      pv_token_t tok = {
+        .line  = lexer->line,
+        .col   = lexer->col,
+        .type  = TOKEN_LPAREN,
+        .value = ""
+      };
+
+      appendToTokenList(&result, tok);
+      pvlex_getCurrentCharAndAdvance(lexer);
+    }
+    else if(current == ')') {
+      pv_token_t tok = {
+        .line  = lexer->line,
+        .col   = lexer->col,
+        .type  = TOKEN_RPAREN,
+        .value = ""
+      };
+
+      appendToTokenList(&result, tok);
+      pvlex_getCurrentCharAndAdvance(lexer);
+    }
+    else if(current == '{') {
+      pv_token_t tok = {
+        .line  = lexer->line,
+        .col   = lexer->col,
+        .type  = TOKEN_LCURLY,
+        .value = ""
+      };
+
+      appendToTokenList(&result, tok);
+      pvlex_getCurrentCharAndAdvance(lexer);
+    }
+    else if(current == '}') {
+      pv_token_t tok = {
+        .line  = lexer->line,
+        .col   = lexer->col,
+        .type  = TOKEN_RCURLY,
+        .value = ""
+      };
+
+      appendToTokenList(&result, tok);
+      pvlex_getCurrentCharAndAdvance(lexer);
     }
   }
 

@@ -9,6 +9,8 @@ enum _pv_tokentype_t {
   TOKEN_BINARYOPERATOR,
   TOKEN_LPAREN,
   TOKEN_RPAREN,
+  TOKEN_LCURLY,
+  TOKEN_RCURLY,
 };
 
 typedef enum _pv_tokentype_t pv_tokentype_t;
