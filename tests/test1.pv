@@ -1,7 +1,4 @@
-double => (x) {
-  x 2 *
-}
+double  => (x) { x 2 * }
+testVar => { 10 }
 
-main => () {
-  10 double return
-}
+testVar double print

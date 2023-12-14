@@ -1,0 +1,135 @@
+Token{1:1, 0, double}
+Token{1:9, 2, =>}
+Token{1:12, 3, }
+Token{1:13, 0, x}
+Token{1:14, 4, }
+Token{1:16, 5, }
+Token{1:18, 0, x}
+Token{1:20, 1, 2}
+Token{1:22, 2, *}
+Token{1:24, 6, }
+Token{2:1, 0, testVar}
+Token{2:9, 2, =>}
+Token{2:12, 5, }
+Token{2:14, 1, 10}
+Token{2:17, 6, }
+Token{4:1, 0, testVar}
+Token{4:9, 0, double}
+Token{4:16, 0, print}
+Token{1:1, 0, double}
+Token{1:12, 3, }
+Token{1:13, 0, x}
+Token{1:16, 5, }
+Token{1:18, 0, x}
+Token{1:20, 1, 2}
+Token{1:22, 2, *}
+Token{2:1, 0, testVar}
+Token{2:12, 5, }
+Token{2:14, 1, 10}
+Token{4:1, 0, testVar}
+Token{4:9, 0, double}
+Token{4:16, 0, print}
+{
+  'line': 1,
+  'col': 1,
+  'type': 1,
+  'value': 'double',
+  'children': [
+    {
+      'line': 1,
+      'col': 12,
+      'type': 5,
+      'value': '',
+      'children': [
+        {
+          'line': 1,
+          'col': 13,
+          'type': 2,
+          'value': 'x',
+          'children': [
+          ]
+        }
+      ]
+    },
+    {
+      'line': 1,
+      'col': 16,
+      'type': 4,
+      'value': '',
+      'children': [
+        {
+          'line': 1,
+          'col': 18,
+          'type': 2,
+          'value': 'x',
+          'children': [
+          ]
+        },
+        {
+          'line': 1,
+          'col': 20,
+          'type': 0,
+          'value': '2',
+          'children': [
+          ]
+        },
+        {
+          'line': 1,
+          'col': 22,
+          'type': 6,
+          'value': '*',
+          'children': [
+          ]
+        }
+      ]
+    }
+  ]
+}
+{
+  'line': 2,
+  'col': 1,
+  'type': 3,
+  'value': 'testVar',
+  'children': [
+    {
+      'line': 2,
+      'col': 12,
+      'type': 4,
+      'value': '',
+      'children': [
+        {
+          'line': 2,
+          'col': 14,
+          'type': 0,
+          'value': '10',
+          'children': [
+          ]
+        }
+      ]
+    }
+  ]
+}
+{
+  'line': 4,
+  'col': 1,
+  'type': 2,
+  'value': 'testVar',
+  'children': [
+  ]
+}
+{
+  'line': 4,
+  'col': 9,
+  'type': 2,
+  'value': 'double',
+  'children': [
+  ]
+}
+{
+  'line': 4,
+  'col': 16,
+  'type': 2,
+  'value': 'print',
+  'children': [
+  ]
+}

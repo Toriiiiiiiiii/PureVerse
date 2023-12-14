@@ -7,12 +7,13 @@
 #include <stdio.h>
 
 enum _pv_astnode_type_t {
-  AST_PROGRAM,
   AST_NUMBERLIT,
   AST_FNDEF,
-  AST_FUNCTION,
+  AST_IDENTIFIER,
+  AST_VARASSIGN,
   AST_BLOCK_CURLY,
   AST_BLOCK_PAREN,
+  AST_BINARY_OP,
 };
 
 typedef enum _pv_astnode_type_t pv_astnode_type_t;

@@ -4,6 +4,9 @@
 #include "include/lexer.h"
 #include "include/token.h"
 
+#include "include/parser.h"
+#include "include/ast.h"
+
 char *readFileContents(char *path) {
   FILE *file = fopen(path, "r");
 
@@ -38,6 +41,13 @@ int main(int argc, char **argv) {
 
   for(int i = 0; i < tokenList.size; ++i) {
     printTokenInformation(getTokenListIndex(&tokenList, i));
+  }
+
+  pv_parser_t parser = createParser(tokenList);
+  pv_astnodelist_t astNodes = parseTokens(&parser);
+
+  for(int i = 0; i < astNodes.size; ++i) {
+    printASTNode(getNodeListIndex(&astNodes, i));
   }
 
   destroyTokenList(&tokenList);

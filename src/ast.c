@@ -29,6 +29,7 @@ void printNodeIndented(pv_astnode_t node, int indent) {
     printNodeIndented(getNodeListIndex(&node.children, index), indent + 2);
 
     if(index < node.children.size - 1) printf(",\n");
+    else printf("\n");
   } 
 
   printIndent(indent + 1);
