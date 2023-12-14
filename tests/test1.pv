@@ -1,3 +1,7 @@
-main => (): int {
-  0 return
+double => (x) {
+  x 2 *
+}
+
+main => () {
+  10 double return
 }
