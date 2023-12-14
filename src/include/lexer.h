@@ -25,6 +25,7 @@ pv_lexer_t createLexer(char *source);
 char pvlex_getCurrentChar(pv_lexer_t *lexer);
 char pvlex_getCurrentCharAndAdvance(pv_lexer_t *lexer);
 bool pvlex_analysisComplete(pv_lexer_t *lexer);
+bool pvlex_charInString(const char *str, char c);
 
 pv_tokenlist_t tokenizeString(pv_lexer_t *lexer);
 

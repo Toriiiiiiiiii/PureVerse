@@ -3,17 +3,21 @@
 
 #include <stdio.h>
 
+enum _pv_tokentype_t {
+  TOKEN_KEYWORD,
+  TOKEN_NUMBERLITERAL,
+  TOKEN_BINARYOPERATOR,
+  TOKEN_LPAREN,
+  TOKEN_RPAREN,
+};
+
+typedef enum _pv_tokentype_t pv_tokentype_t;
+
 struct _pv_token_t {
   int line, col;
-  char *value;
+  pv_tokentype_t type;
 
-  enum {
-    TOKEN_KEYWORD,
-    TOKEN_NUMBERLITERAL,
-    TOKEN_BINARYOPERATOR,
-    TOKEN_LPAREN,
-    TOKEN_RPAREN,
-  } type;
+  char value[512];
 };
 
 typedef struct _pv_token_t pv_token_t;
