@@ -90,6 +90,18 @@ pv_astnode_t parseNode(pv_parser_t *parser) {
     pvparse_getCurrentTokenAndAdvance(parser);
   }
   else if(token.type == TOKEN_BINARYOPERATOR) {
+    if( strcmp(token.value, "/*") == 0 ) {
+      // COMMENT
+      pv_token_t next = pvparse_getCurrentTokenAndAdvance(parser);
+
+      while( strcmp(next.value, "*/") != 0 ) {
+        next = pvparse_getCurrentTokenAndAdvance(parser);
+      }
+
+      //pvparse_getCurrentTokenAndAdvance(parser);
+      return parseNode(parser);
+    }
+
     result.type = AST_BINARY_OP;
     strncpy(result.value, token.value, 512);
   }

@@ -5,20 +5,20 @@
   "value": "",
   "children": [
     {
-      "line": 1,
+      "line": 2,
       "col": 1,
       "type": 2,
-      "value": "double",
+      "value": "fact",
       "children": [
         {
-          "line": 1,
-          "col": 12,
+          "line": 2,
+          "col": 9,
           "type": 6,
           "value": "",
           "children": [
             {
-              "line": 1,
-              "col": 13,
+              "line": 2,
+              "col": 10,
               "type": 3,
               "value": "x",
               "children": [
@@ -27,32 +27,136 @@
           ]
         },
         {
-          "line": 1,
-          "col": 16,
+          "line": 2,
+          "col": 13,
           "type": 5,
           "value": "",
           "children": [
             {
-              "line": 1,
-              "col": 18,
+              "line": 3,
+              "col": 3,
+              "type": 6,
+              "value": "",
+              "children": [
+                {
+                  "line": 3,
+                  "col": 4,
+                  "type": 3,
+                  "value": "x",
+                  "children": [
+                  ]
+                },
+                {
+                  "line": 3,
+                  "col": 6,
+                  "type": 1,
+                  "value": "0",
+                  "children": [
+                  ]
+                },
+                {
+                  "line": 3,
+                  "col": 8,
+                  "type": 7,
+                  "value": "==",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "line": 3,
+              "col": 12,
+              "type": 3,
+              "value": "if",
+              "children": [
+              ]
+            },
+            {
+              "line": 3,
+              "col": 15,
+              "type": 5,
+              "value": "",
+              "children": [
+                {
+                  "line": 3,
+                  "col": 16,
+                  "type": 1,
+                  "value": "1",
+                  "children": [
+                  ]
+                },
+                {
+                  "line": 3,
+                  "col": 18,
+                  "type": 3,
+                  "value": "return",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "line": 5,
+              "col": 3,
+              "type": 6,
+              "value": "",
+              "children": [
+                {
+                  "line": 5,
+                  "col": 4,
+                  "type": 3,
+                  "value": "x",
+                  "children": [
+                  ]
+                },
+                {
+                  "line": 5,
+                  "col": 6,
+                  "type": 1,
+                  "value": "1",
+                  "children": [
+                  ]
+                },
+                {
+                  "line": 5,
+                  "col": 8,
+                  "type": 7,
+                  "value": "-",
+                  "children": [
+                  ]
+                },
+                {
+                  "line": 5,
+                  "col": 10,
+                  "type": 3,
+                  "value": "fact",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "line": 5,
+              "col": 16,
               "type": 3,
               "value": "x",
               "children": [
               ]
             },
             {
-              "line": 1,
-              "col": 20,
-              "type": 1,
-              "value": "2",
+              "line": 5,
+              "col": 18,
+              "type": 7,
+              "value": "*",
               "children": [
               ]
             },
             {
-              "line": 1,
-              "col": 22,
-              "type": 7,
-              "value": "*",
+              "line": 5,
+              "col": 20,
+              "type": 3,
+              "value": "return",
               "children": [
               ]
             }
@@ -61,19 +165,19 @@
       ]
     },
     {
-      "line": 2,
+      "line": 8,
       "col": 1,
       "type": 4,
       "value": "testVar",
       "children": [
         {
-          "line": 2,
+          "line": 8,
           "col": 12,
           "type": 5,
           "value": "",
           "children": [
             {
-              "line": 2,
+              "line": 8,
               "col": 14,
               "type": 1,
               "value": "10",
@@ -85,7 +189,7 @@
       ]
     },
     {
-      "line": 4,
+      "line": 10,
       "col": 1,
       "type": 3,
       "value": "testVar",
@@ -93,16 +197,16 @@
       ]
     },
     {
-      "line": 4,
+      "line": 10,
       "col": 9,
       "type": 3,
-      "value": "double",
+      "value": "fact",
       "children": [
       ]
     },
     {
-      "line": 4,
-      "col": 16,
+      "line": 10,
+      "col": 14,
       "type": 3,
       "value": "print",
       "children": [

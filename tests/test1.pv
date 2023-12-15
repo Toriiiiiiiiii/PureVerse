@@ -1,4 +1,10 @@
-double  => (x) { x 2 * }
+/* Test Comment!!!! */
+fact => (x) {
+  (x 0 ==) if {1 return}
+
+  (x 1 - fact) x * return
+}
+
 testVar => { 10 }
 
-testVar double print
+testVar fact print
